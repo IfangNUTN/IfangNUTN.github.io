@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>I‑Fang Su (Emily)</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 自訂樣式 -->
+  <style>
+    /* —— 全局色彩定義 —— */
+    :root {
+      --bg-color: #eef2f5;       /* 背景淺灰偏藍 */
+      --text-color: #2c3e50;     /* 深藍灰文字 */
+      --accent-color: #1a73e8;   /* 鮮明藍作為標題／連結 */
+      --muted-color: #5f6c7b;    /* 次要文字色 */
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Noto Sans TC", sans-serif;
+    }
+
+    /* Header 區塊 */
+    .header {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .header .portrait {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    .header .site-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    .header .site-tagline {
+      font-size: 1.25rem;
+      color: var(--muted-color);
+      margin-bottom: 1.5rem;
+    }
+    .header .quote {
+      font-style: italic;
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+    }
+    .header .contact-info h6 {
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+    .header .contact-info strong {
+      color: var(--accent-color);
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff;
+    }
+    .nav-link {
+      color: var(--text-color) !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: var(--accent-color) !important;
+    }
+
+    /* 捲動小箭頭 */
+    .scroll-down {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      color: var(--text-color);
+      opacity: 0.6;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50%     { transform: translate(-50%, 0.5rem); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==== Navbar ==== -->
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonial">Pubs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==== Header ==== -->
+  <section id="home" class="header position-relative">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- 左側：形象照 -->
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+          <img src="images/_03A1042.jpg" alt="Portrait" class="portrait">
+        </div>
+        <!-- 右側：文字區 -->
+        <div class="col-lg-8">
+          <h1 class="site-title">I‑Fang Su (Emily)</h1>
+          <p class="site-tagline">國立臺南大學 資訊工程系 助理教授</p>
+          <p class="quote">「箴言 16:9 人心籌算自己的道路，惟耶和華指引他的腳步。」<br>願我所說、所行都為榮耀祢名。</p>
+          <div class="contact-info">
+            <h6><strong>Tel:</strong> (06) 213-3111 Ext. 7800</h6>
+            <h6><strong>Email:</strong> ifangsu at mail dot nutn dot edu dot tw</h6>
+            <h6><strong>Office:</strong> 榮譽校區 ZC308-2</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+<!-- about section start -->
+
+    <section id="about" class="about bg-dark-1">
+        <div class="container py-5">
+            <div class="row">
+
+                <div class="section-title-center text-center pb-5">
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <ul class="nav nav-tabs my-4" id="tab">
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link active">Research Issues</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experiences" class="nav-link">Experiences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#certification" class="nav-link">Educations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#award" class="nav-link">Awards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#social" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link">Projects</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="skills">
+                        <ul class="list-unstyled">
+                            <li><strong>Big Data Database Analysis and Applications </strong></li>
+                            <li>Includind data collection, storage, management, and analysis using advanced database
+                                technologies and analytical tools.
+                                The objective is to support decision-making, trend forecasting, and behavioral analysis.
+                                Applications from financial market predictions to healthcare, logistics optimization,
+                                and beyond </li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Multimodal Database</strong></li>
+                            <li>Integrating text, images, sound, and video enriches content and enhances the learning
+                                experience.
+                                These databases make teaching more interactive and diverse, helping students better
+                                understand and absorb knowledge.</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Applications of Machine Learning and Deep Learning</strong></li>
+                            <li>Applications for predicting climate change and monitor ecosystems, aiding in risk
+                                assessment and market trend analysis. </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="experiences"> <!--經歷-->
+                        <ul class="list-unstyled">
+                            <li><strong>Assistant Professor of Dept. CSIE, NUTN</strong></li>
+                            <li>2025.02 ~ Now</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Associate Professor of Dept. CSIE, NPTU</strong></li>
+                            <li>2024.08 ~ 2025.02</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Assistant Professor of Dept. CSIE, NPTU</strong></li>
+                            <li>2021.08 ~ 2024.07</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>R.D. Consultant - Seknova.com</strong></li>
+                            <li>2018.08 ~ 2021.07</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Ph.D. Researcher of Dept. CSIE, NCKU</strong></li>
+                            <li>2019.08 ~ 2021.07</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Ph.D. Researcher of Office of Research and Development, NYCU</strong></li>
+                            <li>2018.10 ~ 2019.07</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>P.T. Assistant Professor of Dept. Maritime Information and Technology,
+                                    NKUST</strong></li>
+                            <li>2016.08 ~ 2018.08</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Ph.D. Researcher of College of Electrical Engineering & Computer Science,
+                                    NCKU</strong></li>
+                            <li>2015.12 ~ 2016.08</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Assistant Professor of Dept. MIS, Fotech</strong></li>
+                            <li>2010.08 ~ 2014.08</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="certification"><!--學歷-->
+                        <ul class="list-unstyled">
+                            <li><strong>Ph.D. of dept. of CSIE, NCKU, Taiwan</strong></li>
+                            <li>Advanced Database Lab</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Master of dept. of CSIE, NCKU, Taiwan</strong></li>
+                            <li>Advanced Database Lab</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Bechalor of dept. of CSIE, TKU, Taiwan</strong></li>
+                            <li>Multimedia Lab</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="award"><!--得獎-->
+                        <ul class="list-unstyled">
+                            <li><strong>2024 全國大專校院智慧創新暨跨域整合創作競賽-值得注目獎</strong></li>
+                            <li> 三維防災模擬互動式平台</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>2024 7th International Conference on Knowledge Innovation and Invention Best Paper Award</strong></li>
+                            <li>A Smart Contract Vulnerability Detection Manner Based on Large Language Model</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>2024 離島研討會佳作論文獎</strong></li>
+                            <li> 基於提示工程的智能合約漏洞偵測機制</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>2023 數位生活科技研討會最佳論文候選</strong></li>
+                            <li>基於圖對比學習的人體姿勢搜尋系統</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>2022 台灣網際網路研討會最佳論文候選</strong></li>
+                            <li>基於模型融合及對比學習的中文成語推薦模型</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>2021 AIdea 國立臺灣文學館典藏文物劣化辨識競賽</strong></li>
+                            <li> 9 名 /228 名參賽，工研院，國立臺灣文學館主辨 (CV 競賽)。</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>2021 「自動光學瑕疵檢測競賽」</strong></li>
+                            <li>9 名/487 隊伍，工研院主辨 (CV 競賽)。</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="social"><!--會議審稿與主持-->
+
+                        <ul class="list-unstyled">
+                            <li>2024 Tanet論文審稿</li>
+                            <li>2024 離島研討會議程主持</li>
+                            <li>2024 離島研討會論文審稿</li>
+                            <li>2023 Tanet論文審稿</li>
+                      
+                        </ul>
+                    </div>
+                    <!--Project-->
+                    <div class="tab-pane" id="project"><!--會議審稿與主持-->
+
+                        <ul class="list-unstyled">
+                            <li>國科會計畫, 114/08/01-115/07/31, 計畫主持人, 基於對比學習的無監督聚類與哈希整合框架：高效圖像檢索的端到端解決方案</li>                            
+                            <li>國科會計畫, 114/08/01-116/07/31, 共同主持人, 英語口語語法及語言特徵：基於語料庫的臺灣英語教師與母語教師分析</li>                            
+                            <li>國科會計畫, 113/08/01-114/07/31, 計畫主持人, 基於計程車載客紀錄套用強化學習與遷移學習為駕駛推薦客製化之巡航路線之應用</li>                            
+                            <li>國科會計畫, 111/08/01-112/07/31, 計畫主持人, 在時變路網中結合共享運具與大眾運輸系統之最快路徑推薦</li>
+                            <li>資設學院  , 111/05/01-111/12/31, 計畫主持人, 應用圖神經網路於空氣汙染 PM2.5 之估計及預測研究</li>
+                            <li>國科會計畫, 100/08/01-101/07/31, 計畫主持人, 在空間環境中處理最近集合正面查詢與最遠集合負面查詢的系統機制</li>
+                            <li>國科會計畫, 099/11/01-100/10/31, 計畫主持人, 在分散式環境下利用摘要機制支援天際線查詢之研究及實作</li>                      
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div><!-- row end -->
+        </div> <!-- container end -->
+    </section>
+
+    <!-- about section end -->
+
+    <!-- services section start -->
+
+    <section class="bg-dark-2 py-5" id="services">
+        <div class="container pt-5">
+            <div class="section-title-center text-center pb-5">
+                <h2 class="section-title">Teaching Courses</h2>
+            </div>
+            <!-- List all the course year by year-->
+            <ul class="list-unstyled" style="color: rgb(0, 10, 3);">
+                <li><strong>Semester 113-1</strong></li>
+                <li>人工智慧程式設計 / Ai Programming - EMI</li>
+                <li>計算機概論 / Basic Concept of Computer</li>
+                <li>機器學習 / Machine Learning</li>
+                <br>
+                <li><strong>Semester 112-2</strong></li>
+                <li>資料庫系統導論 / Introduction to Database Systems</li>
+                <li>深度學習 / Deep Learning - Master Degree</li>
+                <li>動態網頁設計 / Dynamic Html Design</li>
+                <br>
+                <li><strong>Semester 112-1</strong></li>
+                <li>人工智慧程式設計 / Ai Programming - EMI</li>
+                <li>計算機概論 / Basic Concept of Computer</li>
+                <li>機器學習 / Machine Learning</li>
+                <br>
+                <li><strong>Semester 111-2</strong></li>
+                <li>動態網頁設計 / Dynamic Html Design - EMI</li>
+                <li>網路程式設計 / Programming with Java</li>
+                <li>資料庫系統導論 / Introduction to Database Systems</li>
+                <br>
+                <li><strong>Semester 111-1</strong></li>
+                <li>計算機概論 / Basic Concept of Computer</li>
+                <li>網頁設計與應用 / Design and Applications of Homepage</li>
+                <li>人工智慧程式設計 / Ai Programming</li>
+                <br>
+                <li><strong>Semester 110-2</strong></li>
+                <li>資料庫系統導論 / Introduction to Database Systems</li>
+                <li>深度學習 / Deep Learning - Master Degree</li>
+                <li>動態網頁設計 / Dynamic Html Design</li>
+                <br>
+                <li><strong>Semester 110-1</strong></li>
+                <li>行動裝置遊戲開發 / Mobile Device Game Design</li>
+                <li>計算機概論 / Basic Concept of Computer</li>
+                <li>網頁設計與應用 / Design and Applications of Homepage</li>
+            </ul>
+        </div> <!-- container end-->
+    </section>
+
+    <!-- services section end -->
+
+    <!-- portfolio section start -->
+
+    <section class="py-5 bg-dark-1" id="portfolio">
+        <div class="container py-5">
+            <div class="section-title-center text-center pb-5">
+                <h2 class="section-title">The Intelligent Data Analysis and Application Lab (IDAA) </h2>
+                <h2 class="section-title"> 智慧資訊分析與應用實驗室</h2>
+                <h4>AI That Works in the Real World</h4>
+                <p style="color: rgb(0, 10, 3);">We build and deploy machine learning systems for autonomous drones, 
+                    marine conservation, blockchain security, and advanced visual recognition. 
+                    Our research doesn't stop at papers—we ship production code that solves real problems.</p>
+                <h4>What you'll do here:</h4>  
+                <ul style="color: rgb(0, 10, 3);">
+                    <li>Apply deep learning, reinforcement learning, and computer vision to challenging domains</li>
+                    <li>Train drones to fly autonomously and detect marine life underwater</li>
+                    <li>Develop AI systems that secure blockchain and recognize complex patterns</li>
+                </ul>               
+
+
+
+
+            </div>
+            <!-- Member-->
+            
+        </div>
+    </section>
+
+    <!-- portfolio section end -->
+
+    <!-- testimonial section start -->
+
+    <section class="pt-5 bg-dark-2" id="testimonial">
+        <div class="container py-5">
+            <div class="section-title-center text-center pb-5">
+                <h2 class="section-title">Publications</h2>
+            </div>
+            <h4><strong>Journal Papers</strong></h4>
+            <ul style="color: rgb(2, 16, 93);">                
+                <li>Shun-Ming Wang,<b>I-Fang Su</b>, Yu-Chi Chung: Prompt Tuning Techniques for Chinese Idiom Recommendation. IEEE Access 13: 68037-68051 (2025)</li>
+                <li><b>I-Fang Su</b>, Yu-Chi Chung, Chiang Lee, Pin-Man Huang (2023, Dec). Effective
+                    PM2.5 concentration forecasting based on multiple spatial-temporal GNN for
+                    areas without monitoring stations.. Expert Systems with Applications, 234. (SCI).
+                    nstc 111-2635-E-153-001. </li>
+                <li><b>I-Fang Su</b>, Ping Lei Lin, Yu-Chi Chung, Chiang Lee (2023, Nov). Forecasting of
+                    Taiwan's weighted stock Price index based on machine learning.. Expert Systems,
+                    40(9) . (SCI). </li>
+                <li><b>I-Fang Su</b>, Ding-Li Chen, Chiang Lee, Yu-Chi Chung: Finding Visible kNN Objects in the
+                    Presence of
+                    Obstacles within the User's View Field †. ISPRS Int. J. Geo Inf. 8(3): 151 (2019)</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>, Chiang Lee: k-most suitable locations selection. GeoInformatica
+                    22(4):
+                    661-692 (2018)</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>, Chiang Lee, Pei-Chi Liu: Multiple k nearest neighbor search. World
+                    Wide Web
+                    20(2): 371-398 (2017)</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>, Chiang Lee: Efficient computation of combinatorial skyline queries.
+                    Inf.
+                    Syst. 38(3): 369-387 (2013)</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>, Chiang Lee: An efficient mechanism for processing similarity search
+                    queries
+                    in sensor networks. Inf. Sci. 181(2): 284-307 (2011)</li>
+                <li><b>I-Fang Su</b>, Yu-Chi Chung, Chiang Lee, Yi-Ying Lin: Efficient skyline query processing in
+                    wireless
+                    sensor networks. J. Parallel Distributed Comput. 70(6): 680-698 (2010)</li>
+                <li><b>I-Fang Su</b>, Yu-Chi Chung, Chiang Lee: Top-k Combinatorial Skyline Queries. DASFAA (2) 2010:
+                    79-93
+                </li>
+            </ul>
+
+
+            <h4><strong>Conference Papers</strong></h4>
+            <ul style="color: rgb(6, 0, 65);">
+                <li><b>I-Fang Su</b>, Yu Ying Lin, Yu-Chi Chung: RUL prediction based on a spatial-temporal attention deep nerual network, 7th International Conference on Big Data Engineering (BDE 2025), 
+                    September 24-26, 2025 in Okinawa, Japan.</li>
+                <li><b>I-Fang Su</b>, Chieh-Ling Huang. Yu-Chi Chung: Enhancing Micro Expression Recognition through Optimized Apex
+                    Frame Spotting: A Pair wise Difference Maximization Approach, IEEE International Symposium on Computer, 
+                    Consumer and Control 2025 (IS3C), Taichung, Taiwan.</li>
+                <li><b>蘇溢芳</b>, 鍾毓驥: IRCCHash：利用強化學習優化計程車巡航路線推薦系統, 第二十三屆離島研討會,
+                    2025 May, 澎湖,台灣.</li>
+                <li><b>蘇溢芳</b>, 黃𦼪中, 鍾毓驥: 基於多任務學習的信用卡詐欺偵測模型, 第二十三屆離島研討會,
+                    2025 May, 澎湖,台灣.</li>   
+                <li><b>I-Fang Su</b>, Yu-Chi Chung: Data augmentation for remaining useful life estimation, IEEE International Conference
+                    on Logistics and Industrial 2024 (ICLIE), Ho Chi Minh City, Vietnan.</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>: A Smart Contract Vulnerability Detection Manner Based on Large Language Model, 7th IEEE International Conference
+                    on Knowledge Innovation and Invention 2024, Nagoya, Japan.</li>                    
+                <li>蔡易賢,<b>蘇溢芳</b>, 鍾毓驥: 基於提示工程的智能合約漏洞偵測機制, 第二十二屆離島研討會, 2024 May, 金門,台灣.</li>
+                <li><b>蘇溢芳</b>, 丁全宏, 張芝語: 基於微表情與肢體辨識分析學生情緒用以辨別學習成效, 第二十二屆離島研討會, 2024 May, 金門,台灣.</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>: Recommending the fastest path to commuters by using shared vehicles
+                    and
+                    public transportation systems under time-dependent road networks, 6th IEEE International Conference
+                    on Knowledge Innovation and Invention 2023, Hokkaido, Japan.</li>
+                <li><b>蘇溢芳</b>, 鍾毓驥, 邱宜靜, 李強: IRCCHash：Image Retrieval Based on Contrastive Clustering Hashing,
+                    第二十一屆離島研討會,
+                    2023 May, 宜蘭,台灣.</li>
+                <li>廖彥鈞, <b>蘇溢芳</b>,廖子瑜,鍾毓驥: 基於圖對比學習的體姿勢搜尋系統, 2023年數位生活科技研討會, 2023.05, 高雄, 台灣</li>
+                <li>Yen-Chun Liao; Tz-Yu Liao; <b>I-Fang Su</b>; Yu-Chi Chung: A Pose Retrieval System Based On Skeleton
+                    Contrastive Learning. 9th IEEE International Conference on Applied System Innovation 2023
+                    (IEEE-ICASI 2023. April), Tokyo (Chiba), Japan.</li>
+                <li>顏依靚,黃冠萱,陳詩涵,高崇烜,高煜倫,鍾毓驥,<b>蘇溢芳</b>（2022年12月）。基模型融合及對比學習的中文成語推薦模型。TANET 2022 台灣網際網路研討 會，台灣,桃園。 </li>
+                <li>廖家興, 鍾毓驥, <b>蘇溢芳</b>, 李強（2021年05月）。結合共享運具與大眾運輸系 統於時間相依路網的最快路徑規劃。The Symposium on Digital Life
+                    Technologies
+                    2021 (DLT 2021)，台灣,屏東</li>
+                <li>鄭秀嘉, <b>蘇溢芳</b>, 鍾毓驥, 李強（2021年05月）。考慮時變行程時間與時間窗 限制的團體排程問題。The Symposium on Digital Life Technologies
+                    2021
+                    (DLT 2021)，台灣,屏東。</li>
+                <li>黃品嫚,<b>蘇溢芳</b>,鍾毓驥,李強（2021年05月）。基於遞歸圖神經網路之PM2.5 預測。DLT 2021 數位生活科技研討會，台灣,屏東。 </li>
+                <li>林品磊,鍾毓驥,<b>蘇溢芳</b>,李強（2020年06月）。基於機器學習之台灣加權股價 指數預測。2020數位生活科技研討會。科技部：108-2811-E-006-546。</li>
+                <li>趙珮均,鍾毓驥,<b>蘇溢芳</b>,李強（2020年06月）。群組旅程規劃及排程之研 究。2020數位生活科技研討會。科技部：108-2622-E-006-020-CC3。 </li>
+                <li>李壯, 鍾毓驥, <b>蘇溢芳</b>, 李強（2019年06月）。基於多人查找top-k個地理及文 本相關群。。2019年第十九屆數位生活科技研討會，高雄,台灣</li>
+                <li><b>I-Fang Su</b>, Yu-Chi Chung, Wang-Guan Leung, Chiang Lee (2019, Jul). Finding the Most
+                    Influential
+                    Bundle. International Conference on Innovative Computing and Management Science 2019, Osaka, Japan.
+                </li>
+                <li>Yu-Chi, Chung, <b>I-Fang Su</b>, Chaing Lee, and Ding-Li Chen (2018, Aug). Finding Visible kNN
+                    Objects with
+                    the View Field Constraint. The first international cognitive cities conference (IC3 2018), Okinawa,
+                    Japan</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>, Chiang Lee, Chao-Yue He: Finding the personal fitness trip plan in
+                    road
+                    networks. WOCC 2018: 1-2</li>
+                <li><b>蘇溢芳</b>，廖勝廉，李強，鍾毓驥（2018年08月）。競爭環境下商品訂價系統隨意及感測網路研討會 (WASN 2018)，桃園 台灣。</li>
+                <li>梁汪鸛, 鍾毓驥, <b>蘇溢芳</b>, 李強（2018年06月）。透過reverse top-k 識別 top-m 最具影響力的組合。2018數位生活科技研討會 (DLT 2018)，台中 台灣。
+                </li>
+                <li>何超越,鍾毓驥,<b>蘇溢芳</b>,李強（2017年05月）。在道路網路上的個人化最緊密 出行計畫查詢。離島研討會，金門 台灣。 </li>
+                <li>陳鼎立,鍾毓驥,<b>蘇溢芳</b>,李強（2017年05月）。動態環境下針對特定可視範 圍限制的k個最鄰近可視物件查詢。離島資訊技術與應用研討會，金門 台 灣</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>, Chiang Lee, and Gary Gu (2017, Aug). An efficient distributed range
+                    query
+                    processing algorithm on LiDAR data. International Conference on Ubi-Media Computing and Workshops,
+                    Pattaya, Tailand</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>, Chiang Lee, Pin-Chieh Huang: Finding All Competitive Products Using
+                    the
+                    Dominant Relationship Analysis. IIH-MSP 2015: 133-137</li>
+                <li>Yuan-Ko Huang, <b>I-Fang Su</b>, Lien-Fa Lin, Yu-Chi Chung: Efficient Processing of Updates for
+                    Moving
+                    Objects with Varying Speed and Direction. AINA 2013: 854-861</li>
+                <li>Yuan-Ko Huang, Lien-Fa Lin, Yu-Chi Chung, <b>I-Fang Su</b>: Continuous Min-Max Distance Bounded
+                    Query in
+                    Road Networks. APWeb 2012: 423-434</li>
+                <li><b>I-Fang Su</b>, Yu-Chi Chung, Chiang Lee: Top-k Combinatorial Skyline Queries. DASFAA (2) 2010:
+                    79-93
+                </li>
+                <li><b>I-Fang Su</b>, Yu-Chi Chung, Chiang Lee: Finding Similar Answers in Data-Centric Sensor Networks.
+                    SUTC
+                    2008: 217-224</li>
+                <li>Yu-Chi Chung, <b>I-Fang Su</b>, Chiang Lee: Supporting Multi-Dimensional Range Query for Sensor
+                    Networks.
+                    ICDCS 2007: 35</li>
+                <li><b>I-Fang Su</b>, Chih-Horng Ke, Chiang Lee: Adaptive Resource Management in Sensor Network using
+                    Radius
+                    Configuration Algorithms. Wireless and Optical Communications 2006</li>
+            </ul>
+
+        </div>
+    </section>
+    <!-- testimonial section end -->
+
+    <!-- contact section start -->
+
+
+
+    <!-- contact section end -->
+
+    <!-- footer section start -->
+
+    <footer class="bg-dark">
+        <div class="custom-wrapper d-block d-lg-flex justify-content-between py-4 text-center">
+            <img src="images/logo-dark.png" alt="" class="pb-3 pb-lg-0">            
+            <p class="small fw-bold mb-0 pb-3 pb-lg-0">All Right Reserved | I-Fang Su</p>
+        </div>
+    </footer>
+
+    <!-- footer section end -->
+
+    <siv class="scroll-to-top">
+        <a href="#top"><i class="fas fa-chevron-up"></i></a>
+    </siv>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/script.js"></script>
+
+
+  <!-- Bootstrap 5 JS 與 FontAwesome -->
+  <script src="https://kit.fontawesome.com/4bea204677.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
