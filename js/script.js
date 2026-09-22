@@ -1,19 +1,3 @@
-// typewritter effect
-var app = document.querySelector('.typewritter');
-
-var typewritter = new Typewriter(app, {
-    loop: true
-})
-
-typewritter.typeString('Web Developer')
-    .pauseFor(2000)
-    .deleteAll()
-    .typeString('UI/UX Designer')
-    .deleteAll()
-    .typeString('App Developer')
-    .pauseFor(2000)
-    .start();
-
 // Tab toggle
 var TabList = document.querySelectorAll('.nav-tabs .nav-item a');
 
@@ -72,26 +56,6 @@ btnElem.forEach(function(el, key){
 
     })
 })
-
-// Testimonial Slider
-
-var slider = tns({
-    container: '.my-slider',
-    items: 1,
-    slideBy: 1,
-    controls: false,
-    navPosition: 'bottom',
-    gutter: 30,
-    autoplay: true,
-    autoplayButtonOutput: false,
-    mouseDrag: true,
-    responsive: {
-        960: {
-            items: 2
-        }
-    }
-});
-
 
 window.addEventListener('scroll', function(){
 
